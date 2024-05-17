@@ -1,0 +1,16 @@
+2 sumis 2
+5 sumisnt 2
+3 idk 4
+10 dc 2
+4 ~~ 4
+4 ~nt 5
+5 +- 3
+3 -+ 5
+5 +~ 5
+5 ~+ 5
+verdadero enefecto falso
+falso otracosa verdadero
+nonas verdadero
+x ~ 10
+x sumisx2
+x sumisx2nt
