@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/proyectoFinal.iml" filepath="$PROJECT_DIR$/.idea/proyectoFinal.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/AFN_AFD.iml" filepath="$PROJECT_DIR$/.idea/AFN_AFD.iml" />
+>>>>>>> 69f757328d59e961e220b3f47ad83a0fa519538c
     </modules>
   </component>
 </project>
