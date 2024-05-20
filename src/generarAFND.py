@@ -27,7 +27,7 @@ automata = NFA(q, sigma, delta, initial_state, f)
 
 # If you want to add custom styling, you can use the following
 automata.view(
-    file_name="models/COSO2",
+    file_name="helpers/COSO2",
     node_attr={'fontsize': '20'},
     edge_attr={'fontsize': '20pt'}
 )
