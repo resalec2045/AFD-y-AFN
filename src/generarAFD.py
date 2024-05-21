@@ -1,4 +1,3 @@
-from PIL import Image
 from automathon import DFA
 
 class GenerarAFD:
@@ -27,24 +26,3 @@ class GenerarAFD:
             node_attr={'fontsize': '20'},
             edge_attr={'fontsize': '20pt'}
         )
-
-    @staticmethod
-    def combinar_imagenes(palabras):
-        images = []
-        for palabra in palabras:
-            image = Image.open("automatas/" + palabra + ".gv.png")
-            images.append(image)
-
-        # Asumiendo que todas las imágenes tienen el mismo tamaño
-        width, height = images[0].size
-
-        # Crear una imagen nueva con el tamaño adecuado para todas las imágenes
-        combined_image = Image.new('RGB', (width * len(palabras), height))
-
-        # Pegar cada imagen en la imagen combinada
-        for i, img in enumerate(images):
-            combined_image.paste(img, (i * width, 0))
-
-        # Guardar la imagen combinada
-        combined_image.save("automatas/combined_automatas.png")
-
