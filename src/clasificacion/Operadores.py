@@ -1,6 +1,7 @@
 from src.generarAFD import GenerarAFD
 from src.helpers.PalabrasReservadas import PalabrasReservadas
 
+
 def determinarOperadores(elementos, indice):
     elemento1 = elementos[0]
     elemento2 = elementos[2]
@@ -22,21 +23,32 @@ def determinarOperadores(elementos, indice):
     else:
         return None
 
+
 def imprimirAritmeticos(indice, tipoOperacion, operacion):
-    GenerarAFD.mostrar_automata(operacion)
+    GenerarAFD.mostrar_automata(operacion, tipoOperacion)
     print(f"{indice:<15} {tipoOperacion:<20} {operacion:<15}")
+
 
 def imprimirComparacion(indice, tipoOperacion, operacion):
+    GenerarAFD.mostrar_automata(operacion, tipoOperacion)
     print(f"{indice:<15} {tipoOperacion:<20} {operacion:<15}")
+
 
 def imprimirLogicos(indice, tipoOperacion, operacion):
+    GenerarAFD.mostrar_automata(operacion, tipoOperacion)
     print(f"{indice:<15} {tipoOperacion:<20} {operacion:<15}")
+
 
 def imprimirAsignacion(indice, tipoOperacion, operacion):
+    GenerarAFD.mostrar_automata(operacion, tipoOperacion)
     print(f"{indice:<15} {tipoOperacion:<20} {operacion:<15}")
+
 
 def imprimirIncremento(indice, tipoOperacion, operacion):
+    GenerarAFD.mostrar_automata(operacion, tipoOperacion)
     print(f"{indice:<15} {tipoOperacion:<20} {operacion:<15}")
 
+
 def imprimirDecremento(indice, tipoOperacion, operacion):
+    GenerarAFD.mostrar_automata(operacion, tipoOperacion)
     print(f"{indice:<15} {tipoOperacion:<20} {operacion:<15}")

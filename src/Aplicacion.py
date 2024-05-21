@@ -1,36 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
-from automathon import DFA
 import os
-
-
-class GenerarAFD:
-    @staticmethod
-    def crear_automata(palabra):
-        estados = {'q' + str(i) for i in range(len(palabra) + 1)}
-        sigma = set(palabra)
-        delta = {}
-        for i, letra in enumerate(palabra):
-            estado = 'q' + str(i)
-            siguiente_estado = 'q' + str(i + 1)
-            if estado not in delta:
-                delta[estado] = {}
-            delta[estado][letra] = siguiente_estado
-        estado_inicial = 'q0'
-        estado_final = {'q' + str(len(palabra))}
-        return estados, sigma, delta, estado_inicial, estado_final
-
-    @staticmethod
-    def mostrar_automata(palabra, ruta_archivo):
-        estados, sigma, delta, estado_inicial, estado_final = GenerarAFD.crear_automata(palabra)
-        automata = DFA(estados, sigma, delta, estado_inicial, estado_final)
-        os.makedirs(f"automatas/{ruta_archivo}", exist_ok=True)
-        automata.view(
-            file_name=f"automatas/{ruta_archivo}/{palabra}",
-            node_attr={'fontsize': '20'},
-            edge_attr={'fontsize': '20pt'}
-        )
 
 
 class Aplicacion:
@@ -45,11 +16,26 @@ class Aplicacion:
         nueva_ventana = tk.Toplevel(self.root)
         nueva_ventana.title("Autómatas Generados")
 
+        # Obtener las dimensiones de la pantalla
+        pantalla_ancho = self.root.winfo_screenwidth()
+        pantalla_alto = self.root.winfo_screenheight()
+
+        # Definir el tamaño de la nueva ventana
+        ventana_ancho = int(pantalla_ancho * 0.8)
+        ventana_alto = int(pantalla_alto * 0.8)
+
+        # Calcular las coordenadas para centrar la ventana
+        pos_x = (pantalla_ancho // 2) - (ventana_ancho // 2)
+        pos_y = (pantalla_alto // 2) - (ventana_alto // 2)
+
+        # Configurar las dimensiones y posición de la nueva ventana
+        nueva_ventana.geometry(f"{ventana_ancho}x{ventana_alto}+{pos_x}+{pos_y}")
+
         notebook = ttk.Notebook(nueva_ventana)
         notebook.pack(fill='both', expand=True)
 
         directorio_base = "D://universidad/AFD-y-AFN/src/automatas/"
-        subdirectorios = ["Aritméticos", "Comparación", "Asignación"]
+        subdirectorios = ["Aritméticos", "Comparación", "Asignacion", "Lógicos", "Incremento", "Decremento"]
 
         for subdir in subdirectorios:
             ruta_completa = os.path.join(directorio_base, subdir)

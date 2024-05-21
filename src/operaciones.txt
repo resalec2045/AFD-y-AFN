@@ -14,3 +14,8 @@ nonas verdadero
 x ~ 10
 x sumisx2
 x sumisx2nt
+ifx()
+ifx{}
+ifx[]
+ciclox()start’nt
+ciclox( varx, varx )
