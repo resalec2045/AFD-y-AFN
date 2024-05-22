@@ -20,7 +20,11 @@ def determinarOperadores(elementos, indice):
         imprimirIncremento(indice, operacionTipo, operacionCreada)
     elif operacionTipo == 'Decremento':
         imprimirDecremento(indice, operacionTipo, operacionCreada)
-    elif operacionTipo == 'Apertura':
+    elif operacionTipo == 'Apertura_Y_Cierre':
+        imprimirDecremento(indice, operacionTipo, operacionCreada)
+    elif operacionTipo == 'Terminal':
+        imprimirDecremento(indice, operacionTipo, operacionCreada)
+    elif operacionTipo == 'Separador':
         imprimirDecremento(indice, operacionTipo, operacionCreada)
     else:
         return None

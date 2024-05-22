@@ -16,7 +16,13 @@ class PalabrasReservadas:
         '~': 'Asignación',
         'sumisx2': 'Incremento',
         'sumisx2nt': 'Decremento',
-        '()': 'Apertura'
+        '()': 'Apertura_Y_Cierre',
+        '[]': 'Apertura_Y_Cierre',
+        '{}': 'Apertura_Y_Cierre',
+        'startnt': 'Terminal',
+        ',': 'Separador'
+
+
     }
 
     @classmethod

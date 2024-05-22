@@ -15,8 +15,8 @@ x ~ 10
 x sumisx2 x
 x sumisx2nt x
 x () x
-ifx[]
-12()start’nt
-ciclox( varx, varx )
-ciclox ( )
+x [] x
+x {} x
+x startnt x
+x , x
 

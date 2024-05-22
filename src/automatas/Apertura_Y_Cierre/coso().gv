@@ -1,4 +1,4 @@
-digraph "automatas/Comparación/-+coso" {
+digraph "automatas/Apertura_Y_Cierre/coso()" {
 	graph [rankdir=LR]
 	node [fontsize=20]
 	edge [fontsize="20pt"]
@@ -7,6 +7,6 @@ digraph "automatas/Comparación/-+coso" {
 	q1 [label=q1 shape=circle]
 	q0 [label=q0 shape=circle]
 	"" -> q0 [label=""]
-	q0 -> q1 [label="-"]
-	q1 -> q2 [label="+"]
+	q0 -> q1 [label="("]
+	q1 -> q2 [label=")"]
 }
