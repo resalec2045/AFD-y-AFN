@@ -12,10 +12,11 @@ verdadero enefecto falso
 falso otracosa verdadero
 nonas verdadero
 x ~ 10
-x sumisx2
-x sumisx2nt
-ifx()
-ifx{}
+x sumisx2 x
+x sumisx2nt x
+x () x
 ifx[]
-ciclox()start’nt
+12()start’nt
 ciclox( varx, varx )
+ciclox ( )
+

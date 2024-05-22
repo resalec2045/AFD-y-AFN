@@ -34,8 +34,8 @@ class Aplicacion:
         notebook = ttk.Notebook(nueva_ventana)
         notebook.pack(fill='both', expand=True)
 
-        directorio_base = "D://universidad/AFD-y-AFN/src/automatas/"
-        subdirectorios = ["Aritméticos", "Comparación", "Asignacion", "Lógicos", "Incremento", "Decremento"]
+        directorio_base = "/Users/crisbal/Desktop/proyecto-tlf/AFD-y-AFN/src/automatas/"
+        subdirectorios = ["Aritméticos", "Comparación", "Asignación", "Lógicos", "Incremento", "Decremento", "Apertura"]
 
         for subdir in subdirectorios:
             ruta_completa = os.path.join(directorio_base, subdir)

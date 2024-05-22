@@ -15,7 +15,8 @@ class PalabrasReservadas:
         'nonas': 'Lógicos',
         '~': 'Asignación',
         'sumisx2': 'Incremento',
-        'sumisx2nt': 'Decremento'
+        'sumisx2nt': 'Decremento',
+        '()': 'Apertura'
     }
 
     @classmethod

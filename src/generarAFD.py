@@ -26,12 +26,12 @@ class GenerarAFD:
         estados, sigma, delta, estado_inicial, estado_final = GenerarAFD.crear_automata(palabra)
         automata = DFA(estados, sigma, delta, estado_inicial, estado_final)
         os.makedirs(f"automatas/{ruta_archivo}", exist_ok=True)
+
         automata.view(
-            file_name=f"automatas/{ruta_archivo}/{palabra}",
+            file_name=f"automatas/{ruta_archivo}/coso{palabra}",
             node_attr={'fontsize': '20'},
             edge_attr={'fontsize': '20pt'}
         )
-
 
 class Aplicacion:
     def __init__(self, root):
@@ -48,7 +48,7 @@ class Aplicacion:
         notebook = ttk.Notebook(nueva_ventana)
         notebook.pack(fill='both', expand=True)
 
-        directorio_base = "D://universidad/AFD-y-AFN/src/automatas/"
+        directorio_base = "/Users/crisbal/Desktop/proyecto-tlf/AFD-y-AFN/src/automatas/"
         subdirectorios = ["Aritméticos", "Comparación", "Asignación"]
 
         for subdir in subdirectorios:
