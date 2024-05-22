@@ -20,9 +20,28 @@ class PalabrasReservadas:
         '[]': 'Apertura_Y_Cierre',
         '{}': 'Apertura_Y_Cierre',
         'startnt': 'Terminal',
-        ',': 'Separador'
-
-
+        ',': 'Separador',
+        'ciclox': 'Palabras_reservadas',
+        'mienx': 'Palabras_reservadas',
+        'ifx': 'Palabras_reservadas',
+        'elsex': 'Palabras_reservadas',
+        'Entx': 'Palabras_reservadas',
+        'Decx': 'Palabras_reservadas',
+        'Constx': 'Palabras_reservadas',
+        'Cadex': 'Palabras_reservadas',
+        'varx': 'Identificadores',
+        'funcx': 'Identificadores',
+        'classx': 'Identificadores',
+        'interx': 'Identificadores',
+        'enumx': 'Identificadores',
+        'entx32': 'Valor_de_asignacion',
+        'decimalx64': 'Valor_de_asignacion',
+        'cadenas128': 'Valor_de_asignacion',
+        'charx8': 'Valor_de_asignación',
+        'decx': 'Tipo_de_dato',
+        'entx': 'Tipo_de_dato',
+        'cadex': 'Tipo_de_dato',
+        'charx': 'Tipo_de_dato'
     }
 
     @classmethod

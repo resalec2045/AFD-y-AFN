@@ -1,0 +1,16 @@
+digraph "automatas/Tipo_de_dato/cosodecx" {
+	graph [rankdir=LR]
+	node [fontsize=20]
+	edge [fontsize="20pt"]
+	"" [label="" shape=plaintext]
+	q4 [label=q4 shape=doublecircle]
+	q3 [label=q3 shape=circle]
+	q2 [label=q2 shape=circle]
+	q0 [label=q0 shape=circle]
+	q1 [label=q1 shape=circle]
+	"" -> q0 [label=""]
+	q0 -> q1 [label=d]
+	q1 -> q2 [label=e]
+	q2 -> q3 [label=c]
+	q3 -> q4 [label=x]
+}

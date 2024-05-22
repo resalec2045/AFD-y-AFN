@@ -1,0 +1,16 @@
+digraph "automatas/Palabras_reservadas/cosoEntx" {
+	graph [rankdir=LR]
+	node [fontsize=20]
+	edge [fontsize="20pt"]
+	"" [label="" shape=plaintext]
+	q4 [label=q4 shape=doublecircle]
+	q3 [label=q3 shape=circle]
+	q2 [label=q2 shape=circle]
+	q0 [label=q0 shape=circle]
+	q1 [label=q1 shape=circle]
+	"" -> q0 [label=""]
+	q0 -> q1 [label=E]
+	q1 -> q2 [label=n]
+	q2 -> q3 [label=t]
+	q3 -> q4 [label=x]
+}

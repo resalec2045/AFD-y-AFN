@@ -26,6 +26,14 @@ def determinarOperadores(elementos, indice):
         imprimirDecremento(indice, operacionTipo, operacionCreada)
     elif operacionTipo == 'Separador':
         imprimirDecremento(indice, operacionTipo, operacionCreada)
+    elif operacionTipo == 'Valor_de_asignacion':
+        imprimirDecremento(indice, operacionTipo, operacionCreada)
+    elif operacionTipo == 'Identificadores':
+        imprimirDecremento(indice, operacionTipo, operacionCreada)
+    elif operacionTipo == 'Palabras_reservadas':
+        imprimirDecremento(indice, operacionTipo, operacionCreada)
+    elif operacionTipo == 'Tipo_de_dato':
+        imprimirDecremento(indice, operacionTipo, operacionCreada)
     else:
         return None
 

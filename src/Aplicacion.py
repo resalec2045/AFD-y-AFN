@@ -33,6 +33,18 @@ class Aplicacion:
         frame = ttk.Frame(notebook)
         notebook.add(frame, text="interfaz")
 
+        canvas = tk.Canvas(frame)
+        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        scroll_y = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
+        scroll_y.pack(side=tk.RIGHT, fill=tk.Y)
+
+        canvas.configure(yscrollcommand=scroll_y.set)
+        canvas.bind('<Configure>', lambda e: canvas.configure(scrollregion=canvas.bbox('all')))
+
+        content_frame = ttk.Frame(canvas)
+        canvas.create_window((0, 0), window=content_frame, anchor="n", width=ventana_ancho - 20)
+
         lineas = []
 
         if os.path.isfile(nombre_archivo):
@@ -43,17 +55,17 @@ class Aplicacion:
             return
 
         # Encabezados de la tabla
-        self.titulo = ttk.Label(frame, text="Tabla de Operadores")
-        self.texto = tk.Label(frame, text=f"{'Posicion':<15} {'Categoria':<20} {'Palabra reservada':<15}")
+        self.titulo = ttk.Label(content_frame, text="Tabla de Operadores")
+        self.titulo.pack()
+        self.texto = tk.Label(content_frame, text=f"{'Posicion':<15} {'Categoria':<20} {'Palabra reservada':<15}")
         self.texto.pack()
 
         for indice, linea in enumerate(lineas, start=1):
             elementos = linea.strip().split()
-            # operacionCreada = elementos[1]
             if len(elementos) == 3:
                 Operadores.determinarOperadores(elementos, indice)
                 operacionTipo = PalabrasReservadas.get_palabras_reservadas().get(elementos[1], 'Error')
-                self.texto = tk.Label(frame, text=f"{indice:<15} {operacionTipo:<20} {elementos[1]:<15}")
+                self.texto = tk.Label(content_frame, text=f"{indice:<15} {operacionTipo:<20} {elementos[1]:<15}")
                 self.texto.pack()
 
         self.btn_generar = tk.Button(root, text="Generar Autómatas", command=self.generar_automatas)
@@ -87,7 +99,7 @@ class Aplicacion:
         # Construye la ruta base relativa al directorio actual
         directorio_base = os.path.join(directorio_actual, "automatas")
         subdirectorios = ["Aritméticos", "Comparación", "Asignación", "Lógicos", "Incremento", "Decremento",
-                          "Apertura_Y_Cierre", "Terminal", "Separador"]
+                          "Apertura_Y_Cierre", "Terminal", "Separador", "Palabras_reservadas", "Identificadores", "Valor_de_asignacion", "Tipo_de_dato"]
 
         for subdir in subdirectorios:
             ruta_completa = os.path.join(directorio_base, subdir)
@@ -107,7 +119,7 @@ class Aplicacion:
         canvas.bind('<Configure>', lambda e: canvas.configure(scrollregion=canvas.bbox('all')))
 
         image_frame = tk.Frame(canvas)
-        canvas.create_window((0, 0), window=image_frame, anchor="nw")
+        canvas.create_window((0, 0), window=image_frame, anchor="n")
 
         for archivo in os.listdir(ruta):
             if archivo.endswith(".png"):

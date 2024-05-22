@@ -19,4 +19,24 @@ x [] x
 x {} x
 x startnt x
 x , x
-
+x ciclox x
+x mienx x
+x ifx x
+x elsex x
+x Entx x
+x Decx x
+x Constx x
+x Cadex x
+x varx x
+x funcx x
+x classx x
+x interx x
+x enumx x
+x entx32 x
+x decimalx64 x
+x cadenas128 x
+x charx8 x
+x entx x
+x decx x
+x cadex x
+x charx x
